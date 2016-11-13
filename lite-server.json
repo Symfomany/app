@@ -1,7 +1,0 @@
-{
-    "port": 8066,
-    "server": {
-        "baseDir": "./", //base
-        "index": "index.html" //fichier a chargé
-    }
-}

@@ -11,13 +11,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
+        this.title = "Tour of Heroes";
+        this.clickMessage = '';
+        this.values = '';
     }
+    AppComponent.prototype.onClickMe = function () {
+        this.clickMessage = 'You are my hero!';
+    };
+    // without strong typing
+    AppComponent.prototype.onKey = function (event) {
+        this.values += event.target.value + ' | ';
+    };
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        template: '<h3>Hye Everyone ...</h3>'
+        selector: "my-app",
+        template: "\n            <h3>Hye Everyone ...</h3>\n            {{title}} \n             <div class=\"chip\">\n              {{ clickMessage }}\n            </div>\n        \n            <p *ngIf=\"title.length > 30\">There are many heroes!</p>\n            <button class=\"waves-effect waves-light btn\" (click)=\"onClickMe()\">Click me!</button>\n\n      <div class=\"row\">\n        <form class=\"col s12\">\n          <div class=\"row\">\n              <div class=\"input-field col s6\">\n                <input #box  (keyup)=\"onKey($event)\" placeholder=\"Placeholder\" id=\"first_name\" type=\"text\" class=\"validate\">\n                <p>{{box.value}}</p>\n\n\n                <label for=\"first_name\">First Name</label>\n              </div>\n          </div>\n        </form>\n      </div>\n              <p>{{values}}</p>\n\n\n          "
     }),
     __metadata("design:paramtypes", [])
 ], AppComponent);

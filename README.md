@@ -1,8 +1,11 @@
 # Project of Angular 2
 
-Demo of Project built in Angular 2 with Webpack
+Demo of Project built in Angular 2 with Webpack + TypeScript
 
 
-# Angular Starter
+# Stacks
 
-https://github.com/AngularClass/angular2-webpack-starter
+* Angular 2
+* Typescript
+* Webpack
+* Sass

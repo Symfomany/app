@@ -1,0 +1,126 @@
+<nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+        <ul class="right hide-on-med-and-down">
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav" style="transform: translateX(-100%);">
+        </ul>
+    </div>
+</nav>
+
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+        <div class="row center">
+            <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+
+        </div>
+
+        <div>
+            <button class="waves-effect waves-light btn" title="smaller">-</button>
+            <button class="waves-effect waves-light btn" title="bigger">+</button>
+            <label [style.font-size.px]="size">FontSize: {{size}}px</label>
+        </div>
+
+
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <p>
+                        <label for="homme">Homme</label>
+                        <input name="sexe" type="radio" id="femme" value="femme" />
+                        <label for="femme">Femme</label>
+                    </p>
+
+                    <div class="input-field col s6">
+                        <input [style.background-color]="myBgColor" id="first_name" type="text" class="validate">
+                        <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input [disabled]="activation" id="last_name" type="text" class="validate">
+                        <label for="last_name">Last Name</label>
+                    </div>
+
+                    <div class="switch">
+                        <label for="abo">
+                                Abonné à la newsletter
+                                <input value="oui" name="abo" type="checkbox" id="abo">
+                                <span class="lever"></span>
+                                Non
+                                </label>
+                    </div>
+                    <p class="hide"><i class="material-icons">message</i> Vous recevrez une newsletter dans votre e-mail</p>
+
+                    <div class="card-panel hoverable">
+                        <div class="row">
+                            <label>Technos Favorites</label>
+                            <select class="browser-default">
+                                <option value="" disabled selected>Choose your favorites techs</option>
+                                <option *ngFor="let language of languages"  [value]="language">{{ language }}</option>
+                            </select>
+
+                            <input value="other" #otherTech type="checkbox" id="test5" />
+                            <label for="test5">Ajouter une autre techno</label>
+
+                            <input [class.hide]="!otherTech.checked" type="text" name="add" placeholder="Autre techo...">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                    <label for="textarea1">Description</label>
+                                </div>
+                                <div class="chip">
+                                    0 Mot
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+                    <a class="waves-effect waves-light btn"><i class="material-icons right">check_circle</i>Enregistrer les données</a>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Card Title</span>
+                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">This is a link</a>
+                        <a href="#">This is a link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<footer class="page-footer orange">
+    <div class="container">
+        <div class="row">
+            <div class="col l3 s12">
+                <h5 class="white-text">Settings</h5>
+                <ul>
+                    <li><a class="white-text" href="#!">Link 1</a></li>
+                    <li><a class="white-text" href="#!">Link 2</a></li>
+                    <li><a class="white-text" href="#!">Link 3</a></li>
+                    <li><a class="white-text" href="#!">Link 4</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        </div>
+    </div>
+</footer>
